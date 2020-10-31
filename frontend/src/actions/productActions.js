@@ -9,10 +9,10 @@ import {
 } from '../constants/productConstants'
 
 
-export const listProducts = (id) => async (dispatch) => {
+export const listProducts = () => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_LIST_REQUEST })
-    const { data } = await axios.get(`/api/products/${id}`)
+    const { data } = await axios.get('/api/products')
 
     dispatch({
       type: PRODUCT_LIST_SUCCESS,
@@ -29,10 +29,11 @@ export const listProducts = (id) => async (dispatch) => {
   }
 }
 
-export const listProductDetails = () => async (dispatch) => {
+export const listProductDetails = (id) => async (dispatch) => {
+  console.log('kepanggil fe')
   try {
     dispatch({ type: PRODUCT_DETAILS_REQUEST })
-    const { data } = await axios.get('/api/products')
+    const { data } = await axios.get(`/api/products/${id}`)
 
     dispatch({
       type: PRODUCT_DETAILS_SUCCESS,
