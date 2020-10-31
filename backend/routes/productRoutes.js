@@ -9,8 +9,9 @@ import asyncHandler from 'express-async-handler'
 router.get(
   '/', 
   asyncHandler(async(req,res) => {
+    console.log('masuk')
     const products = await Product.find({})
-    
+    console.log('hasil', products)
     res.json(products)
   })
 )
@@ -21,8 +22,9 @@ router.get(
 router.get(
   '/:id', 
   asyncHandler(async(req,res) => {
+    console.log('masuk')
     const product = await Product.findById(req.params.id)
-
+    console.log('hasil', products)
     if(product) {
       res.json(product)
     } else {
