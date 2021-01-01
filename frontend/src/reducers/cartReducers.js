@@ -1,6 +1,7 @@
 import { CART_ADD_ITEM } from '../constants/cartConstants'
 
 export const cartReducer = (state = { cartItems: [] }, action) => {
+  console.log('masuk', action)
   switch(action.type) {
     case CART_ADD_ITEM:
       const item = action.payload
