@@ -1,3 +1,5 @@
+// TIDAK DIGUNAKAN LAGI
+
 const products = [
   {
     name: 'Airpods Wireless Bluetooth Headphones',
