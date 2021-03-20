@@ -5,7 +5,6 @@ import Order from '../models/orderModel.js'
 // @route   POST /api/orders
 // @access  Private
 const addOrderItems = asyncHandler(async(req, res) => {
-  console.log('masuk', req.body)
   const { 
     orderItems, 
     shippingAddress,
