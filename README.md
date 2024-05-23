@@ -1,46 +1,37 @@
-How to Running this App?
+## How to Running this App?
 
-#### Minimum node version, because in backend we are using ES module, not Node Module (import, require)
-
+### Minimum node version, because in backend we are using ES module, not Node Module (import, require)
 Node JS 12.19.0
 We recommend using Node JS 14 / 16 LTS
 
-#### Notes
-
+### Notes
 We are using moongose as ODM, make sure you have mongodb
 We are using Paypal API, make sure you have Paypal Demo
 
-#### Create .env file
-
+### Create .env file
 NODE_END=development
 PORT=5000
-MONGO_URI=
-JWT_SECRET=
+MONGO_URI=mongodb+srv://something:password@cluster.mongodb.net/dbname?retryWrites=true&w=majority&appName=cluster
+JWT_SECRET=something
+PAYPAL_CLIENT_ID=something
 
-#### Run seeder (Mongoose DB must be already connect)
+### Run seeder (Mongoose DB must be already connect)
+<code>npm run data:import</code>
 
-npm run data:import
+### Install BackEnd
+<code>npm i</code>
 
-#### Install BackEnd
+### Install FrontEnd
+<code>cd /frontend && npm i</code>
 
-npm i
+### Run FrontEnd and BackEnd
+<code>npm run dev</code>
 
-#### Install FrontEnd
+### Check FrontEnd, is up?
+<code>http://localhost:3000/</code>
 
-cd /frontend && npm i
+### Check BackEnd(Server), is up?
+<code>http://localhost:5000/</code>
 
-#### Run FrontEnd and BackEnd
-
-npm run dev
-
-#### Check FrontEnd, is up?
-
-http://localhost:3000/
-
-#### Check BackEnd(Server), is up?
-
-http://localhost:5000/
-
-#### Don't use this command, this command just for reset all data
-
-npm run data:destroy
+### Don't use this command, this command just for reset all data
+<code>npm run data:destroy</code>
