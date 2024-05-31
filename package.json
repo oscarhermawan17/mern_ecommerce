@@ -8,7 +8,9 @@
     "start": "node backend/server",
     "server": "nodemon backend/server",
     "client": "npm start --prefix frontend",
+    "clientvite": "npm run dev --prefix frontend-vite",
     "dev": "concurrently \"npm run server\"  \"npm run client\"",
+    "dev2": "concurrently \"npm run server\"  \"npm run clientvite\"",
     "data:import": "node backend/seeder",
     "data:destroy": "node backend/seeder -d"
   },
