@@ -2,6 +2,8 @@ import path from "path"
 import express from "express"
 import dotenv from "dotenv"
 import colors from "colors"
+import cors from "cors"
+
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js"
 import connectDB from "./config/db.js"
 
@@ -15,6 +17,14 @@ dotenv.config()
 connectDB()
 
 const app = express()
+
+app.use(
+  cors({
+    origin: "https://neoshop.netlify.app/",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true,
+  })
+)
 
 app.use(express.json())
 
