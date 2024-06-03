@@ -1,6 +1,5 @@
 {
-  "name": "frontend vite version port 5000",
-  "proxy": "http://127.0.0.1:5000",
+  "name": "frontend vite port 3003",
   "version": "0.1.0",
   "private": true,
   "type": "module",
